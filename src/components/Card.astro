@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    title: string;
+    imageUrl: string;
+    imageAlt: string;
+    price: number;
+    link: string;
+    stock?: boolean;
+}
+
+const { title, imageUrl, imageAlt, price, link, stock } = Astro.props;
+const stockTextStyle = stock ? 'bg-green-500/50 rounded-lg p-0.5' : 'bg-red-500/50 rounded-lg p-0.5';
+---
+<a href={link}>
+    <div class="
+        w-50 h-50 <!-- Dimensiones fijas de la tarjeta -->
+        inline-flex items-center flex-col <!-- Controlar elementos internos -->
+        bg-gray-800 m-3 <!-- Fondo y margen -->
+        border-2 border-gray-700 rounded-lg <!-- Borde y redondeado -->
+        shadow-lg shadow-gray-700/50 <!-- Sombra -->
+        hover:shadow-gray-300/50 hover:border-gray-300/50 <!-- Hover para sombra y borde -->
+        transform transition duration-100 ease-in-out hover:scale-105 <!-- Transición y efecto hover -->
+    ">
+        <h2>{title}</h2>
+        <div class="w-30 h-30 rounded-lg overflow-hidden"> <!-- Dimensiones fijas para la imagen -->
+            <Image
+                src={imageUrl}
+                alt={imageAlt}
+                width={200}
+                height={200}
+            />
+        </div>
+        <h3>Precio: {price} $</h3>
+        <div class="flex items-center">
+            <h3 class={stockTextStyle}>Stock: {stock ? 'Disponible' : 'Agotado'}</h3>
+        </div>
+    </div>
+</a>

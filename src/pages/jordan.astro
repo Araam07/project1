@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+---
+
+<Layout title="Air Jordan">
+    <h3 class="text-gray-500 text-center">Remember that the prices are demostrative as they can change</h3>
+    <Card 
+        title='Jordan 3 OG Fire Red'
+        imageUrl='https://i.pinimg.com/736x/6f/cd/fc/6fcdfc09651455d3c77a2e1285239eb9.jpg' 
+        imageAlt='Jordan3 OG Fire Red' 
+        price={280}
+        link='https://www.goat.com/sneakers/air-jordan-3-retro-fire-red-2022-dn3707-160'
+        stock={true}
+    />
+    <Card 
+        title='Jordan 3 Black Cat'
+        imageUrl='https://i.pinimg.com/564x/ed/36/75/ed36753fa4238548f79fcf8e13ebfc65.jpg' 
+        imageAlt='Jordan3 BlackCat' 
+        price={300}
+        link='https://telatapa.com/products/telatapa-air-jordan-3-retro-black-cat-black-dark-charcoal-black-136064-002?variant=39749555880020'
+        stock={true}
+    />
+    <Card 
+        title='Jordan 3 Triple White'
+        imageUrl='https://i.pinimg.com/564x/34/0c/da/340cda8c2f53527ac5894780f003ee94.jpg' 
+        imageAlt='Jordan3 Triple White' 
+        price={160}
+        link='https://www.goat.com/sneakers/air-jordan-3-retro-silver-anniversary-398613-102'
+        stock={false}
+    />
+    <Card
+        title='Jordan 3 UNC'
+        imageUrl='https://i.pinimg.com/736x/56/fd/69/56fd6951a29d5ed6d6900dfc3c3ad621.jpg' 
+        imageAlt='Jordan3 UNC' 
+        price={169.98}
+        link='https://wowjay.com/products/air-jordan-3-retro-unc-ct8532-104?variant=43129932677334'
+        stock={false}
+        /> 
+</Layout>
